@@ -1,0 +1,23 @@
+---
+# The influxdb integration makes it possible to transfer
+# all state changes to an external InfluxDB database
+#
+# https://www.home-assistant.io/integrations/influxdb/
+#
+influxdb:
+  api_version: 2
+  ssl: true
+  verify_ssl: false
+  host: 143.47.45.206
+  port: 8086
+  token: !secret influxdb_token
+  organization: riosalido.org
+  bucket: ha
+  tags:
+    source: HA
+  tags_attributes:
+    - friendly_name
+  default_measurement: units
+  include:
+    entities:
+      - sensor.shelly_em_1_channel_1_energy
