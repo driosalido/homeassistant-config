@@ -10,7 +10,7 @@ influxdb:
   verify_ssl: false
   host: 143.47.45.206
   port: 8086
-  token: !influxdb_token
+  token: !secret influxdb_token
   organization: riosalido.org
   bucket: ha
   tags:
