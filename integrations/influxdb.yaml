@@ -19,7 +19,7 @@ influxdb:
     - friendly_name
   default_measurement: units
   include:
-    entities_globs:
+    entity_globs:
       - sensor.shelly*_power
       - sensor.shelly*_energy
     entities:
