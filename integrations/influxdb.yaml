@@ -7,8 +7,8 @@
 influxdb:
   api_version: 2
   ssl: true
-  verify_ssl: false
-  host: 143.47.45.206
+  verify_ssl: true
+  host: domo-1.riosalido.org
   port: 8086
   token: !secret influxdb_token
   organization: riosalido.org
