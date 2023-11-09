@@ -25,3 +25,6 @@ influxdb:
     entities:
       - sensor.wemo_today_energy
       - sensor.wemo_current_power
+      - sensor.pvpc_excedentes
+      - sensor.esios_pvpc
+      - sensor.omie_spot_price_es
