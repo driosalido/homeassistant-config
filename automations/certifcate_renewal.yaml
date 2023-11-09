@@ -1,0 +1,12 @@
+alias: Renew Let's Encrypt Certificate
+description: ""
+use_blueprint:
+  path: TJ-developer/renew_ssl_cert.yaml
+  input:
+    cert_expiry_sensor: sensor.ha_home_riosalido_org_8123_caducidad_del_certificado
+    renew_date: 7
+    time_to_check_cert: "11:00:00"
+    send_notification: true
+    notification_device: cefae06610798ba94f6a6c1552e790d1
+    notification_title: Renovación Certificado
+    notification_message: Renovación del certificado de Home Assistant
