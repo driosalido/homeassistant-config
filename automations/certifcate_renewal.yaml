@@ -1,5 +1,7 @@
-alias: Renew Let's Encrypt Certificate
-description: ""
+---
+alias: Renueva Certificados Home Assistant
+description: >-
+  Renueva los certificados de Let's Encrypt para Home Assistant
 use_blueprint:
   path: TJ-developer/renew_ssl_cert.yaml
   input:
