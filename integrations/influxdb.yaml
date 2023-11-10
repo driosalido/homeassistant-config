@@ -19,12 +19,12 @@ influxdb:
     - friendly_name
   default_measurement: units
   include:
-    # entity_globs:
-    #   - sensor.shelly*_power
-    #   - sensor.shelly*_energy
-       - sensor.*_heating
-       - sensor.*_temperature
-       - sensor.*_humidity
+    entity_globs:
+     # - sensor.shelly*_power
+     # - sensor.shelly*_energy
+      - sensor.*_heating
+      - sensor.*_temperature
+      - sensor.*_humidity
     entities:
       # - sensor.wemo_today_energy
       # - sensor.wemo_current_power
