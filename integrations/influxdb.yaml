@@ -22,8 +22,9 @@ influxdb:
     # entity_globs:
     #   - sensor.shelly*_power
     #   - sensor.shelly*_energy
-    #   - sensor.*_calefaccion
-    #   - sensor.*_temperatura
+       - sensor.*_heating
+       - sensor.*_temperature
+       - sensor.*_humidity
     entities:
       # - sensor.wemo_today_energy
       # - sensor.wemo_current_power
