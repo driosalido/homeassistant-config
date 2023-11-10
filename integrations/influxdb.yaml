@@ -1,32 +1,32 @@
 ---
 # The influxdb integration makes it possible to transfer
 # all state changes to an external InfluxDB database
-#
+
 # https://www.home-assistant.io/integrations/influxdb/
-#
-# influxdb:
-#   api_version: 2
-#   ssl: true
-#   verify_ssl: true
-#   host: domo-1.riosalido.org
-#   port: 8086
-#   token: !secret influxdb_token
-#   organization: riosalido.org
-#   bucket: ha
-#   tags:
-#     source: HA
-#   tags_attributes:
-#     - friendly_name
-#   default_measurement: units
-#   include:
-#     entity_globs:
-#       - sensor.shelly*_power
-#       - sensor.shelly*_energy
-#       - sensor.*_calefaccion
-#       - sensor.*_temperatura
-#     entities:
-#       - sensor.wemo_today_energy
-#       - sensor.wemo_current_power
-#       - sensor.pvpc_excedentes
-#       - sensor.esios_pvpc
-#       - sensor.omie_spot_price_es
+
+influxdb:
+  api_version: 2
+  ssl: true
+  verify_ssl: true
+  host: domo-1.riosalido.org
+  port: 8086
+  token: !secret influxdb_token
+  organization: riosalido.org
+  bucket: ha
+  tags:
+    source: HA
+  tags_attributes:
+    - friendly_name
+  default_measurement: units
+  include:
+    # entity_globs:
+    #   - sensor.shelly*_power
+    #   - sensor.shelly*_energy
+    #   - sensor.*_calefaccion
+    #   - sensor.*_temperatura
+    entities:
+      # - sensor.wemo_today_energy
+      # - sensor.wemo_current_power
+      # - sensor.pvpc_excedentes
+      - sensor.esios_pvpc
+      # - sensor.omie_spot_price_es
