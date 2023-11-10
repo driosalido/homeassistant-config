@@ -1,0 +1,6 @@
+---
+#
+sensor:
+  - name: "Precio OMIE"
+    unit_of_measurement: "€/kWh"
+    value_template: "{{ state('sensor.omie_spot_price_es') | float / 1000 }}"
