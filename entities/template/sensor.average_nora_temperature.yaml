@@ -1,0 +1,10 @@
+---
+#
+sensor:
+  - name: "Temperatura media Nora"
+    unit_of_measurement: "°C"
+    state: >
+      {% set netatmo = states('sensor.netatmo_2_temperature') | float %}
+      {% set tado = states('sensor.tado_nora_temperature') | float %}
+
+      {{ ((netatmo + tado) / 2) | round(1, default=0) }}
