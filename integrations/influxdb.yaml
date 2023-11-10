@@ -29,4 +29,5 @@ influxdb:
       # - sensor.wemo_current_power
       # - sensor.pvpc_excedentes
       - sensor.esios_pvpc
-      # - sensor.omie_spot_price_es
+      - sensor.omie_spot_price_es
+      - sensor.omie_adjustment_price_es
