@@ -1,7 +1,7 @@
 ---
 #
 sensor:
-  - name: "Precio OMIE con Peajes"
+  - name: "Precio OMIE con Peajes y Perdidas"
     unit_of_measurement: "€/kWh"
     icon: "mdi:currency-eur"
     state: >
@@ -9,4 +9,4 @@ sensor:
       {% set gas = states('sensor.omie_adjustment_price_es') | float / 1000 %}
       {% set tolls = states('sensor.esios_tolls_cost') | float %}
 
-      {{ (omie + gas + tolls) }}
+      {{ ((omie * 1.18) + gas + tolls) }}
