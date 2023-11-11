@@ -11,8 +11,6 @@ sensor:
 
       {{ pvpc - toll }}
     attributes:
-      pvpc: {{ float(states('sensor.esios_pvpc')) }}
-      toll: {{ float(states('sensor.esios_tolls_cost',0)) }}
       price_00h: >
         {% set pvpc = state_atrr('sensor.esios_pvpc','price_00h') %}
         {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_00h') %}
