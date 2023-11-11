@@ -1,7 +1,8 @@
 ---
 #
 sensor:
-  - name: "Temperatura media Nora"
+  - name: "average_nora_temperature"
+    unique_id: "c3c63ba0d-7a78-4587-aecc-6d29be9e0456"
     unit_of_measurement: "°C"
     state: >
       {% set netatmo = states('sensor.netatmo_2_temperature') | float %}

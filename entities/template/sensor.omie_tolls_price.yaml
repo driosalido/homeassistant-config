@@ -1,7 +1,8 @@
 ---
 #
 sensor:
-  - #name: "Precio OMIE con Peajes y Perdidas"
+  - name: "omie_tolls_loss_price"
+    unique_id: "6cfd53de-0029-4cd3-9ecb-69665f3d9c5c"
     unit_of_measurement: "€/kWh"
     icon: "mdi:currency-eur"
     state: >

@@ -1,7 +1,8 @@
 ---
 #
 sensor:
-  - name: "Temperatura media Salón"
+  - name: "average_salon_temperature"
+    unique_id: "2e8f9c46-0433-463b-815a-a7cbea0c24f1"
     unit_of_measurement: "°C"
     state: >
       {% set netatmo = states('sensor.netatmo_master_temperature') | float %}
