@@ -1,0 +1,10 @@
+---
+#
+sensor:
+  - name: "Precio OMIE con Peajes"
+    unit_of_measurement: "€/kWh"
+    state: >
+      {% set omie = states('sensor.omie_spot_price_es') | float / 1000 %}
+      {% set tolls = states('sensor.esios_tolls_cost') | float %}
+
+      {{ (omie + tolls) }}
