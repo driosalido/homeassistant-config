@@ -36,3 +36,4 @@ influxdb:
       - sensor.cs_3_power_production_now
       - sensor.cs_3_energy_current_hour
       - sensor.cs_energy_price
+      - sensor.cs_self_consumption_price
