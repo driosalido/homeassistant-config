@@ -1,7 +1,7 @@
 ---
 #
 sensor:
-  - name: "Precio OMIE con Peajes y Perdidas"
+  - #name: "Precio OMIE con Peajes y Perdidas"
     unit_of_measurement: "€/kWh"
     icon: "mdi:currency-eur"
     state: >
