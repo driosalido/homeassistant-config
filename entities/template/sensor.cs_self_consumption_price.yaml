@@ -62,7 +62,7 @@ sensor:
           {% endif %}
         {%- endfor %}
       price_07h: >
-        {% set pvpc = states.sensor.esios_pvpc.attributes['price_007h'] | float %}
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_07h'] | float %}
         {%- for date in state_attr('sensor.omie_spot_price_es','today_hours') -%}
           {%- if '07' in date.strftime('%H') %}
           {{ pvpc - (state_attr('sensor.omie_spot_price_es','today_hours')[date]/1000) }}
@@ -132,7 +132,7 @@ sensor:
           {% endif %}
         {%- endfor %}
       price_17h: >
-        {% set pvpc = states.sensor.esios_pvpc.attributes['price_117h'] | float %}
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_17h'] | float %}
         {%- for date in state_attr('sensor.omie_spot_price_es','today_hours') -%}
           {%- if '17' in date.strftime('%H') %}
           {{ pvpc - (state_attr('sensor.omie_spot_price_es','today_hours')[date]/1000) }}
