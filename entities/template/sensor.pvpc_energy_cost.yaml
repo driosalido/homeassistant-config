@@ -13,5 +13,5 @@ sensor:
     attributes:
       price_00h: >
         {% set pvpc = states.sensor.esios_pvpc.attributes['price_00h'] | float %}
-        {% set toll = states.sensor.esios_tolls_cost.attributes['price_00h'] | float %}
+        {% set toll = float(states.sensor.esios_tolls_cost.attributes['price_00h'],0) %}
         {{ pvpc - toll }}
