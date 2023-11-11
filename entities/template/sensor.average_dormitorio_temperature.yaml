@@ -2,7 +2,6 @@
 #
 sensor:
   - name: "average_dormitorio_temperature"
-    friendly_name: "Media temperatura dormitorio"
     unique_id: "f4a3f583-9b22-4b12-b99f-a8b95ca342ea"
     unit_of_measurement: "°C"
     state: >
