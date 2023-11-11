@@ -8,6 +8,6 @@ sensor:
     state: >
       {% set omie = states('sensor.omie_spot_price_es') | float / 1000 %}
       {% set gas = states('sensor.omie_adjustment_price_es') | float / 1000 %}
-      {% set tolls = states('sensor.esios_tolls_cost') | float %}
+      {% set tolls = float(states('sensor.esios_tolls_cost'),0) %}
 
       {{ ((omie * 1.18) + gas + tolls) }}
