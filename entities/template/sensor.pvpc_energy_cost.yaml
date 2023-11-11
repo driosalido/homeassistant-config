@@ -1,5 +1,10 @@
 ---
 #
+#   sensor.esios_pvpc = €/kWh
+#   sensor.omie_adjustment_price_es = today_hours:'2023-11-11T00:00:00+01:00': 0
+#   sensor.omie_spot_price_es = today_hours.'2023-11-11T00:00:00+01:00': 19.08
+#
+
 sensor:
   - name: "pvpc_energy_cost"
     unique_id: "83969946-8768-4227-a5d6-90227dafb903"

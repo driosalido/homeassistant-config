@@ -1,0 +1,21 @@
+---
+#
+sensor:
+  - name: "cs_self_consumption_price"
+    unique_id: "181ac6b6-80bc-11ee-b962-0242ac120002"
+    unit_of_measurement: "€/kWh"
+    icon: "mdi:currency-eur"
+    state: >
+      {% set pvpc = states('sensor.esios_pvpc') | float %}
+      {% set omie = float(states('sensor.omie_spot_price_es',0))/1000 %}
+
+      {{ pvpc - omie  }}
+
+    attributes:
+      price_00h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_00h'] | float %}
+        {%- for date in state_attr('sensor.omie_spot_price_es','today_hours') -%}
+          {%- if '00' in date.strftime('%H') %}
+          {{ pvpc - (state_attr('sensor.omie_spot_price_es','today_hours')[date]/1000) }}
+          {% endif %}
+        {%- endfor %}
