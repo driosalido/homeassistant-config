@@ -108,3 +108,99 @@ sensor:
         {% set pvpc = states.sensor.esios_pvpc.attributes['price_23h'] | float %}
         {% set margen= float(0.01) %}
         {{ pvpc + margen }}
+      price_next_day_00h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_00h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_01h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_01h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_02h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_02h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_03h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_03h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_04h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_04h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_05h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_05h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_06h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_06h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_07h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_07h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_08h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_08h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_09h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_09h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_10h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_10h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_11h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_11h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_12h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_12h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_13h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_13h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_14h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_14h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_15h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_15h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_16h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_16h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_17h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_17h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_18h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_18h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_19h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_19h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_20h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_20h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_21h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_21h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_22h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_22h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
+      price_next_day_23h: >
+        {% set pvpc = states.sensor.esios_pvpc.attributes['price_next_day_23h'] | float %}
+        {% set margen= float(0.01) %}
+        {{ pvpc + margen }}
