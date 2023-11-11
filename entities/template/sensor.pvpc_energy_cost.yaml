@@ -9,31 +9,103 @@ sensor:
       {% set pvpc = states('sensor.esios_pvpc') | float %}
       {% set toll = float(states('sensor.esios_tolls_cost',0)) %}
 
-      {{ pvpc-toll  }}
+      {{ pvpc - toll }}
     attributes:
       pvpc: {{ states('sensor.esios_pvpc') }}
       toll: {{ float(states('sensor.esios_tolls_cost',0)) }}
-      price_00h: {{ state_attr('sensor.esios_pvpc','price_00h') - state_attr('sensor.esios_tolls_cost','price_00h')}}
-      price_01h: {{ state_attr('sensor.esios_pvpc','price_01h') - state_attr('sensor.esios_tolls_cost','price_01h')}}
-      price_02h: {{ state_attr('sensor.esios_pvpc','price_02h') - state_attr('sensor.esios_tolls_cost','price_02h')}}
-      price_03h: {{ state_attr('sensor.esios_pvpc','price_03h') - state_attr('sensor.esios_tolls_cost','price_03h')}}
-      price_04h: {{ state_attr('sensor.esios_pvpc','price_04h') - state_attr('sensor.esios_tolls_cost','price_04h')}}
-      price_05h: {{ state_attr('sensor.esios_pvpc','price_05h') - state_attr('sensor.esios_tolls_cost','price_05h')}}
-      price_06h: {{ state_attr('sensor.esios_pvpc','price_06h') - state_attr('sensor.esios_tolls_cost','price_06h')}}
-      price_07h: {{ state_attr('sensor.esios_pvpc','price_07h') - state_attr('sensor.esios_tolls_cost','price_07h')}}
-      price_08h: {{ state_attr('sensor.esios_pvpc','price_08h') - state_attr('sensor.esios_tolls_cost','price_08h')}}
-      price_09h: {{ state_attr('sensor.esios_pvpc','price_09h') - state_attr('sensor.esios_tolls_cost','price_09h')}}
-      price_10h: {{ state_attr('sensor.esios_pvpc','price_10h') - state_attr('sensor.esios_tolls_cost','price_10h')}}
-      price_11h: {{ state_attr('sensor.esios_pvpc','price_11h') - state_attr('sensor.esios_tolls_cost','price_11h')}}
-      price_12h: {{ state_attr('sensor.esios_pvpc','price_12h') - state_attr('sensor.esios_tolls_cost','price_12h')}}
-      price_13h: {{ state_attr('sensor.esios_pvpc','price_13h') - state_attr('sensor.esios_tolls_cost','price_13h')}}
-      price_14h: {{ state_attr('sensor.esios_pvpc','price_14h') - state_attr('sensor.esios_tolls_cost','price_14h')}}
-      price_15h: {{ state_attr('sensor.esios_pvpc','price_15h') - state_attr('sensor.esios_tolls_cost','price_15h')}}
-      price_16h: {{ state_attr('sensor.esios_pvpc','price_16h') - state_attr('sensor.esios_tolls_cost','price_16h')}}
-      price_17h: {{ state_attr('sensor.esios_pvpc','price_17h') - state_attr('sensor.esios_tolls_cost','price_17h')}}
-      price_18h: {{ state_attr('sensor.esios_pvpc','price_18h') - state_attr('sensor.esios_tolls_cost','price_18h')}}
-      price_19h: {{ state_attr('sensor.esios_pvpc','price_19h') - state_attr('sensor.esios_tolls_cost','price_19h')}}
-      price_20h: {{ state_attr('sensor.esios_pvpc','price_20h') - state_attr('sensor.esios_tolls_cost','price_20h')}}
-      price_21h: {{ state_attr('sensor.esios_pvpc','price_21h') - state_attr('sensor.esios_tolls_cost','price_21h')}}
-      price_22h: {{ state_attr('sensor.esios_pvpc','price_22h') - state_attr('sensor.esios_tolls_cost','price_22h')}}
-      price_23h: {{ state_attr('sensor.esios_pvpc','price_23h') - state_attr('sensor.esios_tolls_cost','price_23h')}}
+      price_00h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_00h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_00h') %}
+        {{ pvpc - toll }}
+      price_01h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_01h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_01h') %}
+        {{ pvpc - toll }}
+      price_02h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_02h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_02h') %}
+        {{ pvpc - toll }}
+      price_03h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_03h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_03h') %}
+        {{ pvpc - toll }}
+      price_04h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_04h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_04h') %}
+        {{ pvpc - toll }}
+      price_05h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_05h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_05h') %}
+        {{ pvpc - toll }}
+      price_06h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_06h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_06h') %}
+        {{ pvpc - toll }}
+      price_07h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_07h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_07h') %}
+        {{ pvpc - toll }}
+      price_08h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_08h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_08h') %}
+        {{ pvpc - toll }}
+      price_09h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_09h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_09h') %}
+        {{ pvpc - toll }}
+      price_10h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_10h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_10h') %}
+        {{ pvpc - toll }}
+      price_11h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_11h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_11h') %}
+        {{ pvpc - toll }}
+      price_12h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_12h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_12h') %}
+        {{ pvpc - toll }}
+      price_13h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_13h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_13h') %}
+        {{ pvpc - toll }}
+      price_14h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_14h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_14h') %}
+        {{ pvpc - toll }}
+      price_15h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_15h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_15h') %}
+        {{ pvpc - toll }}
+      price_16h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_16h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_16h') %}
+        {{ pvpc - toll }}
+      price_17h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_17h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_17h') %}
+        {{ pvpc - toll }}
+      price_18h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_18h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_18h') %}
+        {{ pvpc - toll }}
+      price_19h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_19h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_19h') %}
+        {{ pvpc - toll }}
+      price_20h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_20h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_20h') %}
+        {{ pvpc - toll }}
+      price_21h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_21h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_21h') %}
+        {{ pvpc - toll }}
+      price_22h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_22h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_22h') %}
+        {{ pvpc - toll }}
+      price_23h: >
+        {% set pvpc = state_atrr('sensor.esios_pvpc','price_23h') %}
+        {% set toll = float(state_atrr('sensor.esios_tolls_cost','price_23h') %}
+        {{ pvpc - toll }}
