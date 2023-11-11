@@ -30,6 +30,7 @@ influxdb:
       - sensor.wemo_current_power
       - sensor.esios_pvpc
       - sensor.esios_pvpc_surplus_price
+      - sensor.pvpc_energy_cost
       - sensor.omie_adjustment_price_es
       - sensor.cs_3_power_production_now
       - sensor.cs_3_energy_current_hour
