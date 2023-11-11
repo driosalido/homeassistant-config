@@ -1,0 +1,12 @@
+---
+#
+sensor:
+  - name: "cs_energy_price"
+    unique_id: "6cfd53de-0029-4cd2-9ecb-69665f3d9c5c"
+    unit_of_measurement: "€/kWh"
+    icon: "mdi:currency-eur"
+    state: >
+      {% set pvpc = states('sensor.esios_pvpc') | float %}
+      {% set margen= float(0.01) %}
+
+      {{ pvpc + margen  }}
