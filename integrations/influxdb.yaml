@@ -25,7 +25,7 @@ influxdb:
       - sensor.*_heating
       - sensor.*_temperature
       - sensor.*_humidity
-    entities:
+#    entities:
 #      - sensor.wemo_today_energy
 #      - sensor.wemo_current_power
 #      - sensor.esios_pvpc
