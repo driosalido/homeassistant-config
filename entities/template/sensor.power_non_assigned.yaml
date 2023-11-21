@@ -1,0 +1,14 @@
+---
+#
+sensor:
+  - name: "power_non_assigned"
+    unique_id: "e9aaa992-8848-11ee-b9d1-0242ac120002"
+    unit_of_measurement: "W"
+    state: >
+      {% set total_power = states('sensor.shellyem_349454745df1_channel_1_power') | float %}
+      {% set wemo = states('sensor.wemo_current_power') | float %}
+      {% set shellyem_chan2 = states('sensor.shellyem_349454745df1_channel_2_power') | float %}
+      {% set plug1 = states('sensor.shellyplug_s_d9ac25_power') | float %}
+      {% set plug2 = states('sensor.shellyplug_s_f13df7_power') | float %}
+      {% set plus1pm = states('sensor.shellyplus1pm_b48a0a210368_switch_0_power') | float %}
+      {{ total_power - (wemo + shellyem_chan2 + shellyem_chan2 + plug1 + plug2 +  plus1pm) }}
