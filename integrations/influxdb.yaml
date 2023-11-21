@@ -12,7 +12,7 @@ influxdb:
   port: 8086
   token: !secret influxdb_token
   organization: riosalido.org
-  bucket: ha
+  bucket: domo
   tags:
     source: HA
   tags_attributes:
