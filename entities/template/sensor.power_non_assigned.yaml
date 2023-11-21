@@ -4,6 +4,8 @@ sensor:
   - name: "power_non_assigned"
     unique_id: "e9aaa992-8848-11ee-b9d1-0242ac120002"
     unit_of_measurement: "W"
+    device_class: power
+    state_class: measurement
     state: >
       {% set total_power = states('sensor.shellyem_349454745df1_channel_1_power') | float %}
       {% set wemo = states('sensor.wemo_current_power') | float %}

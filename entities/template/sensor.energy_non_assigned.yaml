@@ -4,6 +4,7 @@ sensor:
   - name: "energy_non_assigned"
     unique_id: "a449c678-8850-11ee-b9d1-0242ac120002"
     unit_of_measurement: "kWh"
+    device_class: energy
     state: >
       {% set total_power = states('sensor.shellyem_349454745df1_channel_1_energy') | float %}
       {% set wemo = states('sensor.wemo_today_energy') | float %}
