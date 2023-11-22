@@ -1,2 +1,3 @@
 platform: ping
-host: imac5k.local
+host: 192.168.24.21
+name: imac5k
