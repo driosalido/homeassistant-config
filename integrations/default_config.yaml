@@ -11,3 +11,4 @@
 # zeroconf, person, scene, system_healt, and a lot more.
 #
 default_config: ~
+wake_on_lan: ~
