@@ -5,4 +5,5 @@
 #
 # https://www.home-assistant.io/integrations/sensor
 #
-shell_command: !include_dir_list ../shell_commands
+shell_command:
+  turn_off_imac5k: "ssh driosalido@imac5k.local sudo shutdown -h now"
