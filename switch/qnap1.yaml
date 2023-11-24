@@ -1,0 +1,6 @@
+name: qnap1
+platform: wake_on_lan
+mac: 00:08:9B:EF:00:04
+host: 192.168.24.50
+turn_off:
+  service: shell_command.turn_off_qnap1

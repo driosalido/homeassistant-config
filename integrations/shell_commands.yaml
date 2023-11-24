@@ -7,4 +7,5 @@
 #
 shell_command:
   turn_off_imac5k: "ssh -i /config/ssh_keys/id_rsa -o StrictHostKeyChecking=no -q driosalido@imac5k.local sudo shutdown -h now"
+  turn_off_qnap1: "ssh -i /config/ssh_keys/id_rsa -o StrictHostKeyChecking=no -q admin@192.168.24.50 /sbin/poweroff"
   turn_off_qnap2: "ssh -i /config/ssh_keys/id_rsa -o StrictHostKeyChecking=no -q admin@192.168.24.51 /sbin/poweroff"
