@@ -1,0 +1,8 @@
+---
+# The sensor integrationThey monitor the states and conditions of a variety of entities
+#
+# This loads up my sensors
+#
+# https://www.home-assistant.io/integrations/sensor
+#
+shell_command: !include_dir_list ../shell_commands
