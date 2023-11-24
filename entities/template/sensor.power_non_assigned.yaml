@@ -7,10 +7,10 @@ sensor:
     device_class: power
     state_class: measurement
     state: >
-      {% set total_power = states('sensor.shellyem_349454745df1_channel_1_power') | float %}
-      {% set wemo = states('sensor.wemo_current_power') | float %}
-      {% set shellyem_chan2 = states('sensor.shellyem_349454745df1_channel_2_power') | float %}
-      {% set plug1 = states('sensor.shellyplug_s_d9ac25_power') | float %}
-      {% set plug2 = states('sensor.shellyplug_s_f13df7_power') | float %}
-      {% set plus1pm = states('sensor.shellyplus1pm_b48a0a210368_switch_0_power') | float %}
+      {% set total_power = states('sensor.shellyem_349454745df1_channel_1_power') | default(0.0,true) | float %}
+      {% set wemo = states('sensor.wemo_today_power') | default(0.0,true)|  float %}
+      {% set shellyem_chan2 = states('sensor.shellyem_349454745df1_channel_2_power') | default(0.0,true) | float %}
+      {% set plug1 = states('sensor.shellyplug_s_d9ac25_power') | default(0.0,true) | float %}
+      {% set plug2 = states('sensor.shellyplug_s_f13df7_power') | default(0.0,true) | float %}
+      {% set plus1pm = states('sensor.shellyplus1pm_b48a0a210368_switch_0_power') | default(0.0,true) | float %}
       {{ total_power - (wemo + shellyem_chan2 + shellyem_chan2 + plug1 + plug2 +  plus1pm) }}

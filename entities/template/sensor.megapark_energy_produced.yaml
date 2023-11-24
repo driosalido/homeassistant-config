@@ -1,0 +1,12 @@
+---
+#
+sensor:
+  - name: "megapark_energy_produced"
+    unique_id: "0f87ae92-09e6-438e-ae8b-3f4d97b4aef1"
+    unit_of_measurement: "kWh"
+    device_class: energy
+    state_class: total_increasing
+    state: >
+      {% set energy_production_today = states('sensor.energy_production_today') | default(0.0,true) | float %}
+      {% set energy_production_today_remaining = states('sensor.energy_production_today_remaining') | default(0.0,true) | float %}
+      {{  energy_production_today - energy_production_today_remaining }}
