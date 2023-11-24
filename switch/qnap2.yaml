@@ -1,0 +1,4 @@
+name: qnap2
+platform: wake_on_lan
+mac: 24:5E:BE:43:E8:B7
+host: 192.168.24.51
