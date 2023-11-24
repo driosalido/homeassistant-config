@@ -6,4 +6,4 @@
 # https://www.home-assistant.io/integrations/sensor
 #
 shell_command:
-  turn_off_imac5k: "ssh driosalido@imac5k.local sudo shutdown -h now"
+  turn_off_imac5k: "ssh -i /config/ssh_keys/id_rsa -o StrictHostKeyChecking=no -q driosalido@imac5k.local sudo shutdown -h now"
