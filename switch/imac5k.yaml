@@ -1,0 +1,4 @@
+platform: wake_on_lan
+mac: 28:f0:76:12:5f:42
+name: imac5k
+host: 192.168.24.21
