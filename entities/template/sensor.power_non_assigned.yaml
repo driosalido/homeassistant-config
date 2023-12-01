@@ -8,7 +8,7 @@ sensor:
     state_class: measurement
     state: >
       {% set total_power = states('sensor.shellyem_349454745df1_channel_1_power') | float(0) %}
-      {% set wemo = states('sensor.wemo_today_power') | float(0) %}
+      {% set wemo = states('sensor.wemo_current_power') | float(0) %}
       {% set shellyem_chan2 = states('sensor.shellyem_349454745df1_channel_2_power') | float(0) %}
       {% set plug1 = states('sensor.shellyplug_s_d9ac25_power') | float(0) %}
       {% set plug2 = states('sensor.shellyplug_s_f13df7_power') | float(0) %}
