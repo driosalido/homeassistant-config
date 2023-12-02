@@ -1,2 +1,13 @@
 alexa:
   smart_home:
+    locale: es-ES
+    endpoint: https://api.eu.amazonalexa.com/v3/events
+    client_id: !secret alexa_client_id
+    client_secret: !secret alexa_client_secret
+    filter:
+      include_entities:
+        - switch.shellyplus1pm_b48a0a210368_switch_0
+    entity_config:
+      switch.shellyplus1pm_b48a0a210368_switch_0:
+        name: "Ordenadores"
+        description: "Interruptor Ordenadores del estudio"
